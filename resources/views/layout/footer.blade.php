@@ -47,7 +47,7 @@
         <div class="col-md-5 col-lg-8">
           <p>©Copyright 2022. All Rights Reserved by 
             <a href="#">
-              <strong class="name-team">PK2021TI & BBson Team</strong>
+              <strong class="name-team">PK2022TI & BBson Team</strong>
             </a>
           </p>
         </div>

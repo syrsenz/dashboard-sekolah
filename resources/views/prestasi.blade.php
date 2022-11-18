@@ -1,6 +1,54 @@
 @extends('layout/navbar')
 @section('body')
-<div class="container pb-3 mt-3"><!--Container berita start-->
+
+{{-- Prestasi Section --}}
+<section id="prestasi" class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center title-prestasi">
+        <h2>Prestasi</h2>
+      </div>
+    </div>
+
+    <!--Container prestasi start-->
+    <div class="row mt-5">
+
+      <!--row prestasi start-->
+      <div class="row">
+        {{-- @foreach ($prestasi as $prestasi) --}}
+        <div class="card-prestasi mt-3" >
+          <div class="row-prestasi row col-12 border-white border rounded-2" >
+            <div class="col-md-4 p-2">
+              <img src="assets/berita.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="col-md-8" style="position: relative">
+              <h5 class="prestasi-title text-dark mt-2 mb-2">Judul Prestasi</h5>
+              <div class="text-secondary border-bottom border-secondary py-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+                  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+                  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+                <p class="d-inline">Dibuat pada tanggal</p>
+              </div>
+              <p class="card-text">Deskripsi Prestasi</p>
+              <a href="/" class="link-to" style="position: absolute; bottom:10px; right:10px">Selengkapnya...</a>
+            </div> 
+          </div>
+        </div>
+        {{-- @endforeach --}}
+      </div>
+      <!--row prestasi end-->
+
+    </div>
+  </div>
+  <!--Container prestasi end-->
+
+</section>
+{{-- Prestasi Section End --}}
+
+
+
+{{-- <div class="container pb-3 mt-3"><!--Container berita start-->
     <div class="row col-12 mb-4"><!--row berita start-->
       <div class="card border-bottom border-white" style="width: 25rem;">
         <img src="assets/berita.jpg" class="card-img-top" alt="...">
@@ -25,7 +73,7 @@
     
 
   </div><!--row berita end-->
-</div><!--Container berita end-->
+</div><!--Container berita end--> --}}
 @include('layout/footer')
 
 @endsection

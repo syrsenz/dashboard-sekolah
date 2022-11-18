@@ -90,7 +90,7 @@
     <!--Container prestasi start-->
     <div class="row mt-5">
 
-      <!--row berita start-->
+      <!--row prestasi start-->
       <div class="row">
         @foreach ($prestasi as $prestasi)
         <div class="card-prestasi mt-3" >
@@ -114,7 +114,7 @@
         </div>
         @endforeach
       </div>
-      <!--row berita end-->
+      <!--row prestasi end-->
 
     </div>
   </div>
