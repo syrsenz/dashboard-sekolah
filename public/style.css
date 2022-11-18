@@ -1,0 +1,390 @@
+/* color: #f8f3f2;
+color: #d90368;
+color: #820263;
+color: #ffd400;
+color: #181818; 
+color: #1d4e89; */
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f8f3f2;
+}
+
+* {
+    z-index: 2;
+}
+
+/* ---Navbar ----> */
+.navbar {
+    z-index: 3;
+    background-color: #f8f3f2;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-link {
+    font-weight: 700;
+    font-size: 16px;
+    color: #181818;
+}
+
+.nav-link:hover {
+    color: #ffd400;
+}
+
+.nav-link.active {
+    font-weight: 700;
+    color: #d90368 !important;
+}
+
+.button-primary {
+    width: 133px;
+    height: 40px;
+    background-color: #ffd400;
+    border: none;
+    border-radius: 20px;
+    color: #181818;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.2s ease-in;
+}
+
+.button-primary:hover {
+    background-color: #181818;
+    color: #f8f3f2;
+    transition: all 0.2s ease-in;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* ---Hero Section ----> */
+#hero {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mask {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.img-hero {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.hero-nametag {
+    color: #f8f3f2;
+}
+
+/* ---Berita Section ----> */
+#berita {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.title-berita h2 {
+    font-weight: bolder;
+    color: #1d4e89;
+}
+
+.row {
+    margin: auto;
+}
+
+.card-berita {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-image {
+    object-fit: contain;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.image-berita {
+    width: 100%;
+    min-height: 50%;
+    object-fit: contain;
+}
+
+.btn-primary {
+    background-color: #ffffff !important;
+    border: 2px solid #d90368 !important;
+    border-radius: 5px !important;
+    color: #d90368 !important;
+    font-weight: 700 !important;
+    font-size: 17px !important;
+    text-transform: uppercase !important;
+}
+
+.btn-primary:hover {
+    background-color: #d90368 !important;
+    color: #f8f3f2 !important;
+}
+
+/* ---Prestasi Section ----> */
+#prestasi {
+    padding: 100px 0;
+    background-color: #f8f3f2;
+}
+
+.title-prestasi h2 {
+    font-weight: bolder;
+    color: #1d4e89;
+}
+
+.card-prestasi {
+    height: 100%;
+}
+
+.row-prestasi {
+    font-weight: bolder;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+    margin: auto;
+}
+
+.prestasi-title {
+    color: #f8f3f2;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.link-to {
+    color: gray;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.link-to:hover {
+    color: #d90368;
+}
+
+/* ---Galeri Section ----> */
+#galeri {
+    padding: 100px 0;
+    background-color: #1d4e89;
+}
+
+.title-galeri h2 {
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+/* ---Footer ----> */
+.footer {
+    padding: 100px 0;
+    background-color: #181818;
+}
+
+.footer-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.footer-container {
+    text-align: left;
+}
+
+.footer-row {
+    text-align: left;
+}
+
+.footer p {
+    font-weight: 500;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.footer-p {
+    color: #ffffff;
+    transition: all 0.2s ease-in;
+}
+
+.footer-p:hover {
+    color: #ffd400;
+    transition: all 0.2s ease-in;
+}
+
+.fas {
+    margin-right: 5px;
+}
+
+.name-team {
+    color: #ffd400;
+}
+
+/* .bg-image {
+    background-image: url("/assets/gedung.jpg");
+    z-index: 1;
+}
+
+.sekolah {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+} */
+
+/* a:hover {
+    color: #ffd400;
+} */
+
+/* .color_bg {
+    background-color: #ffffff;
+}
+
+.color__text {
+    background-color: var(--color-text);
+}
+
+.section__padding {
+    padding: 4rem 6rem;
+}
+
+.section__margin {
+    padding: 4rem 6rem;
+}
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+        both;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .section__padding : {
+        padding: 4rem;
+    }
+    .section__margin : {
+        padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .section__padding : {
+        padding: 4rem 2rem;
+    }
+    .section__margin : {
+        padding: 4rem 2rem;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+    --font-family: "Raleway", sans-serif;
+
+    --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+    --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
+
+    --color-bg: #040c18;
+    --color-footer: #031b34;
+    --color-blog: #042c54;
+    --color-text: #81afdd;
+    --color-subtext: #ff8a71;
+}
+
+.homepage__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1d4e89;
+    padding: 1rem 6rem;
+}
+
+.homepage__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #1d4e89;
+}
+
+.homepage__navbar-links_logo {
+    margin-right: 2rem;
+}
+
+.homepage__navbar-links_logo img {
+    height: 51px;
+    width: 49.7088623046875px;
+}
+
+.homepage__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.homepage__navbar-sign {
+    display: flex;
+    align-items: center;
+}
+
+.homepage__navbar-links_container p,
+.homepage__navbar-sign p,
+.homepage__navbar-menu_container p {
+    color: #4f6d7a;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: capitalize;
+
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.homepage__navbar-sign button,
+.homepage__navbar-menu_container button {
+    padding: 0.5rem 1rem;
+    font-family: var(--font-family);
+    color: #fff;
+    font-size: 15px;
+    line-height: 25px;
+    border: none;
+
+    background: #f8f3f2;
+    border-radius: 60px;
+    color: #181818;
+} */
