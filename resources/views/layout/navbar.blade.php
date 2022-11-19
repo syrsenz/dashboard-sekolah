@@ -18,19 +18,58 @@
 {{-- Responsive Navbar --}}
 {{-- <link rel="stylesheet" href="css/navbar.css"> --}}
 
-{{-- <link rel="stylesheet" href="/style.css"> --}}
-
-{{-- tailwind daisyUI----> --}}
-  {{-- <link href="https://cdn.jsdelivr.net/npm/daisyui@2.38.1/dist/full.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="{{ asset('css/app.css') }}" /> --}}
-{{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 
 </head>
 <body>
 
+    {{-- Navbar --}}
+
+    <nav class="navbar navbar-expand-lg navbar-light position-fixed">
+      <div class="container">
+        <a class="navbar-brand">
+          <img src="/assets/logo.png" alt="logo" width="50" class="d-inline-block me-3">SMA Negeri 1 Muntilan
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center align-items-center" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="/">BERANDA</a>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navbarDropdown" href="/profile" >PROFIL</a>
+              <ul class="dropdown-menu mt-3" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="profile/visimisi" >Visi & Misi</a></li>
+                <li><a class="dropdown-item" href="profile/sejarah" >Sejarah</a></li>
+                <li><a class="dropdown-item" href="profile/fasilitas" >Fasilitas</a></li>
+                <li><a class="dropdown-item" href="profile/gurukaryawan" >Guru & Karyawan</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/berita">BERITA</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/prestasi">PRESTASI</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/galeri">GALERI</a>
+            </li>
+          </ul>
+          <div>
+            <button class="button-primary" href="/kontak">KONTAK
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+
   {{-- Navbar --}}
 
-  <nav class="navbar navbar-expand-lg navbar-light position-fixed">
+  {{-- <nav class="navbar navbar-expand-lg navbar-light position-fixed">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="/assets/logo.png" alt="logo" width="50" class="d-inline-block me-3">SMA Negeri 1 Muntilan
@@ -62,7 +101,7 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> --}}
 
 {{-- <div style="background-color:   #a9cff5">
   <div class="container" style="background-color:   #a9cff5">

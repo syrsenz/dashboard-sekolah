@@ -30,6 +30,12 @@ class dashboard_controller extends Controller
     public function profile(){
         return view('profile');
     }
+    public function visimisi(){
+        return view('visimisi');
+    }
+    public function sejarah(){
+        return view('sejarah');
+    }
     public function login(){
         return view('admin/login');
     }

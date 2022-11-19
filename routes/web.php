@@ -17,6 +17,8 @@ Route::get('/berita', [dashboard_controller::class,'berita']);
 Route::get('/prestasi', [dashboard_controller::class,'prestasi']);
 Route::get('/galeri', [dashboard_controller::class,'galeri']);
 Route::get('/profile', [dashboard_controller::class,'profile']);
+Route::get('/profile/visimisi', [dashboard_controller::class,'visimisi']);
+Route::get('/profile/sejarah', [dashboard_controller::class,'sejarah']);
 Route::get('/login', [dashboard_controller::class,'login'])->name('login');
 Route::post('/login', [dashboard_controller::class,'proses_login']);
 Route::post('/logout', [dashboard_controller::class,'proses_logout']);
