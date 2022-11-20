@@ -5,6 +5,14 @@
     @csrf
             <label>Nama Sekolah</label>
             <input class="form-control"   type="text" name="nama_sekolah" id="" value="{{$profile->nama_sekolah}}"><br>
+            <label>Visi Sekolah</label>
+            <input class="form-control"   type="text" name="visi_sekolah" id="" value="{{$profile->visi_sekolah}}"><br>
+            <label>Misi Sekolah</label>
+            <input class="form-control"   type="hidden" name="misi_sekolah" id="misi_sekolah" value="{{$profile->misi_sekolah}}">
+            <trix-editor input="misi_sekolah" class="mb-3"></trix-editor><br>
+            <label>Deskripsi Sekolah</label>
+            <input class="form-control"   type="hidden" name="deskripsi_sekolah" id="deskripsi_sekolah" value="{{$profile->deskripsi_sekolah}}">
+            <trix-editor input="deskripsi_sekolah" class="mb-3"></trix-editor><br>
             <label>Jenis Sekolah</label>
             <input class="form-control"   type="text" name="jenis_sekolah" id="" value="{{$profile->jenis_sekolah}}"><br>
             <label>NSS Sekolah</label>

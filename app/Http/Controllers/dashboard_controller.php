@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use  \App\Models\postingan;
 use  \App\Models\kategori;
 use  \App\Models\profile;
+use  \App\Models\galeri;
 
 class dashboard_controller extends Controller
 {
@@ -19,22 +20,39 @@ class dashboard_controller extends Controller
         ]);
     }
     public function berita(){
-        return view('berita');
+        return view('berita',[
+            'beritas'=>postingan::where('kategori_id','1')->latest()->paginate(12),
+            'profile'=>profile::find(1)
+        ]);
     }
+    
     public function prestasi(){
-        return view('prestasi');
+        return view('prestasi',[
+            'prestasis'=>postingan::where('kategori_id','2')->latest()->paginate(12),
+            'profile'=>profile::find(1)
+        ]);
     }
     public function galeri(){
-        return view('galeri');
+        return view('galeri',[
+            'galeris'=>galeri::latest()->paginate(12),
+        ]);
     }
     public function profile(){
-        return view('profile');
+        return view('profile',[
+            'profile'=>profile::find(1)
+        ]);
     }
     public function visimisi(){
         return view('visimisi');
     }
     public function sejarah(){
         return view('sejarah');
+    }
+    public function fasilitas(){
+        return view('fasilitas');
+    }
+    public function gurudankaryawan(){
+        return view('gurukaryawan');
     }
     public function login(){
         return view('admin/login');
@@ -61,5 +79,28 @@ class dashboard_controller extends Controller
         $request->session()->regenerateToken();
      
         return redirect('/');
+    }
+
+    public function bacaArtikel($slug){
+        return view('bacaArtikel',[
+            'artikel'=>postingan::where('slug',$slug)->get(),
+            'beritaterbaru'=>postingan::where('kategori_id','1')->limit(5)->get(),
+            'prestasiterbaru'=>postingan::where('kategori_id','2')->limit(5)->get(),
+            'profile'=>profile::find(1)
+        ]);
+       
+    }
+    public function cari(){
+        $getid=kategori::where('name', request('search'))->get();
+        
+       return view('cari',[
+        'post'=>postingan::where('judul', 'like','%'.request('search').'%' )
+            ->orWhere('body', 'like','%'.request('search').'%')
+            ->get(),
+        'profile'=>profile::find(1),
+        'jumlah'=>postingan::where('judul', 'like','%'.request('search').'%' )
+        ->orWhere('body', 'like','%'.request('search').'%')
+        ->count(),
+       ]);
     }
 }

@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use  \App\Models\postingan;
-use  \App\Models\kategori;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
+use  \App\Models\galeri;
 use File;
 
-class postingan_controller extends Controller
+
+class galeri_controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +16,9 @@ class postingan_controller extends Controller
      */
     public function index()
     {
-        return view('admin/postingan',[
-            'post'=> postingan::all(),
-        ]);
+       return view('admin/galeri',[
+        'galeri'=>galeri::all()
+       ]);
     }
 
     /**
@@ -29,9 +28,7 @@ class postingan_controller extends Controller
      */
     public function create()
     {
-        return view('admin/create_postingan',[
-            'kategori'=>kategori::all()
-        ]);
+        return view('admin/create_galeri');
     }
 
     /**
@@ -41,23 +38,18 @@ class postingan_controller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   //@dd($request);
+    {
         $validated=$request->validate([
-            'user_id'=>[''],
-            'kategori_id'=>['required'],
+            'keterangan'=>[''],
             'foto'=>['image','file'],
-            'body'=>['required'],
-            'judul'=>['required'],
-            'slug'=>['']
         ]);
-        $validated['user_id']=auth()->user()->id;
 
         if($request->file('foto')){
-            $validated['foto']=$request->file('foto')->store('foto-postingan');
+            $validated['foto']=$request->file('foto')->store('foto-galeri');
         }
        
-        postingan::create($validated);
-        return redirect('/postingan')->with('berhasil-tambah-partner', 'Partner Berhasil Ditambah');
+        galeri::create($validated);
+        return redirect('/galeriadmin');
        
     }
 
@@ -69,7 +61,7 @@ class postingan_controller extends Controller
      */
     public function show($id)
     {
-        return 'hello';
+        //
     }
 
     /**
@@ -80,9 +72,8 @@ class postingan_controller extends Controller
      */
     public function edit($id)
     {
-        return view('admin/update_postingan',[
-            'postingan'=>postingan::find($id),
-            'kategori'=>kategori::all()
+        return view('admin/update_galeri',[
+            'galeri'=>galeri::find($id)
         ]);
     }
 
@@ -94,28 +85,21 @@ class postingan_controller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {//@dd($request);
+    {
         $validated=$request->validate([
-            'user_id'=>[''],
-            'kategori_id'=>['required'],
+            'keterangan'=>[''],
             'foto'=>['image','file'],
-            'body'=>['required'],
-            'judul'=>['required'],
-            'slug'=>['']
         ]);
-        $validated['user_id']=auth()->user()->id;
+    
         
         if($request->file('foto')){
             $validated['foto']=$request->file('foto')->store('foto-postingan');
-            $foto= postingan::find($id);
+            $foto= galeri::find($id);
             File::delete('image/'.$foto->foto);
 
         }
-        postingan::find($id)->update($validated);
-        return redirect('/postingan')->with('berhasil-tambah-partner', 'Partner Berhasil Ditambah');
-       
-    
-
+        galeri::find($id)->update($validated);
+        return redirect('/galeriadmin');
     }
 
     /**
@@ -126,16 +110,9 @@ class postingan_controller extends Controller
      */
     public function destroy($id)
     {
-        $foto= postingan::find($id);
+        $foto= galeri::find($id);
         File::delete('image/'.$foto->foto);
         $foto->delete();
-        return redirect('/postingan');
-    }
-
-
-    public function slug(Request $request)
-    {
-    $slug = SlugService::createSlug(postingan::class, 'slug', $request->judul);
-    return response()->json(['slug'=>$slug]);
+        return redirect('/galeriadmin');
     }
 }

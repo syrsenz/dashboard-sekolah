@@ -1,4 +1,4 @@
-<footer id="kontak">
+<footer>
   <div class="footer py-2 bg-dark">
     <div class="container">
       <div class="row row-footer">
@@ -56,7 +56,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-5 col-lg-8">
-          <p>© Copyright 2022. All Rights Reserved by 
+          <p>©Copyright 2022. All Rights Reserved by 
             <a href="#">
               <strong class="name-team">PK2022TI & BBson Team</strong>
             </a>

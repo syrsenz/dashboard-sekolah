@@ -37,6 +37,9 @@ class CreateProfilesTable extends Migration
             $table->text('alamat_kepala_sekolah');
             $table->text('pendidikan_kepala_sekolah');
             $table->text('jurusan_kepala_sekolah');
+            $table->text('visi_sekolah');
+            $table->text('misi_sekolah');
+            $table->text('deskripsi_sekolah');
             $table->timestamps();
         });
     }

@@ -97,7 +97,10 @@ class profile_sekolah_controller extends Controller
             'ttl_kepala_sekolah'=>['required'],
             'alamat_kepala_sekolah'=>['required'],
             'pendidikan_kepala_sekolah'=>['required'],
-            'jurusan_kepala_sekolah'=> ['required']
+            'jurusan_kepala_sekolah'=> ['required'],
+            'visi_sekolah'=> ['required'],
+            'misi_sekolah'=> ['required'],
+            'deskripsi_sekolah'=> ['required']
         ]);
 
         profile::find($id)->update($validated);

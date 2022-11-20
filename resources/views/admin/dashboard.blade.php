@@ -13,6 +13,18 @@
             <td>{{$profile->nama_sekolah}}</td>
         </tr>
         <tr>
+            <td>Visi Sekolah</td>
+            <td>{{$profile->visi_sekolah}}</td>
+        </tr>
+        <tr>
+            <td>Misi Sekolah</td>
+            <td>{{Str::limit(strip_tags($profile->misi_sekolah),20)}}</td>
+        </tr>
+        <tr>
+            <td>Deskripsi Sekolah</td>
+            <td>{{Str::limit(strip_tags($profile->deskripsi_sekolah),20)}}</td>
+        </tr>
+        <tr>
             <td>Jenis Sekolah</td>
             <td>{{$profile->jenis_sekolah}}</td>
         </tr>

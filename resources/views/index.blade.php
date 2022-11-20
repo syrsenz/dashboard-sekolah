@@ -1,34 +1,41 @@
 @extends('layout/navbar')
 @section('body')
 
-{{-- Hero Section --}}
-<section id="hero">
-  <div class="mask">
-    <img src="/assets/gedung.jpg" alt="" class="img-hero">
-    <div class="row h-100">
-      <div class="hero-nametag my-auto">
-        <div class="text-center text-white fs-3">{{$profile->nama_sekolah}}</div>
-        <div class="text-center text-white">{{$profile->visi_sekolah}}</div>
+{{-- Scroll to Top --}}
+<a id="button">
+  <i class="fas fa-angle-up"></i>
+</a>
+{{-- Scroll to Top (End) --}}
+
+
+{{-- Banner Section --}}
+<section class="content-banner">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12">
+        <div class="banner-con">
+          <p class="nama-sekolah">{{$profile->nama_sekolah}}</p>
+          <p class="visi-sekolah">{{$profile->visi_sekolah}}</p>
+        </div>
       </div>
     </div>
+
+    {{-- Search Box --}}
+    <div class="search-box-container pt-5 pb-5">
+      <div class="col-md-6 col-lg-6 col-11 mx-auto my-auto search">
+        <div class="input-group form-container">
+          <input type="text" name="search" class="form-control search-input" placeholder="Apa yang ingin anda cari?" autofocus="autofocus" autocomplete="off">
+          <span class="input-group-btn">
+            <button class="btn btn-search">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    {{-- End Search Box --}}
   </div>
 </section>
-
-<div class="col-12 d-flex justify-content-center pt-5 pb-3" style="background-color: #1d4e89">
-  <form action="" method="post" class="col-4" style="position: relative">
-    <div class="input-icon col-12" style="position: relative">
-      <input type="text" class="form-control rounded-5 p-2" placeholder="apa yang ingin anda cari ?">
-      <button class="btn rounded-circle text-white " style="position: absolute; top:2px; right:3px;background-color:#dd6e42;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-        </svg>
-      </button>
-    </div>
-    <div class="text-center mt-2 mb-1">
-      Pencarian Populer : penerimaan siswa baru
-    </div>
-  </form>
-</div>
 
 
 {{-- Berita Section --}}
@@ -127,22 +134,36 @@
 {{-- Prestasi Section End --}}
 
 
-{{-- Galeri Section --}}
-{{-- <section id="galeri">
-  <div class="container">
-    <div class="col-12 text-center title-galeri">
-      <h2>Galeri</h2>
-    </div>
-  </div>
+{{-- JS --}}
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript">
 
-  <div class="d-flex justify-content-center mt-5">
-    <a href="/galeri" class="btn-primary btn">Tampilkan Semua Galeri</a>
-  </div>
-</section> --}}
+  $(function(){
+    var navbar = $('.header-inner');
+    $(window).scroll(function(){
+      if($(window).scrollTop() <= 40){
+        navbar.removeClass('navbar-scroll');
+      } else {
+        navbar.addClass('navbar-scroll');
+      }
+    });
+  });
+  
 
+  var btnsc = $('#button');
+  $(window).scroll(function(){
+    if($(window).scrollTop() > 300){
+      btnsc.addClass('show');
+    } else {
+      btnsc.removeClass('show');
+    }
+  });
 
-
-
+  btnsc.on('click', function(e){
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+</script>
 
 @include('layout/footer')
 

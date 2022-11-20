@@ -9,7 +9,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class postingan extends Model
 {
     use HasFactory;
-    use Sluggable;
+     use Sluggable;
     protected $guarded=['id'];
 
     public function sluggable(): array

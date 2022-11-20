@@ -40,7 +40,10 @@ class DatabaseSeeder extends Seeder
             'ttl_kepala_sekolah'=>'Silahkan Update Data anda !',
             'alamat_kepala_sekolah'=>'Silahkan Update Data anda !',
             'pendidikan_kepala_sekolah'=>'Silahkan Update Data anda !',
-            'jurusan_kepala_sekolah'=>'Silahkan Update Data anda !'
+            'jurusan_kepala_sekolah'=>'Silahkan Update Data anda !',
+            'visi_sekolah'=>'Silahkan Update Data anda !',
+            'misi_sekolah'=>'Silahkan Update Data anda !',
+            'deskripsi_sekolah'=>'Silahkan Update Data anda !'
          ]);
         
     }

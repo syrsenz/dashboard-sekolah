@@ -6,10 +6,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center title-profile">
-                <div class="visi-misi">                
-                    <h2>Sejarah</h2>
+                <div class="visi-misi mt-4">                
+                    <br><br>
                     <div class="col p-2">
-                        <div class="text-left fs-2">Visi</div>
+                        <div class="text-left fs-2">Halaman Sejarah</div>
                         <div class="d-flex">
                             <p class="col-8">
                                 Sekolah historis berbasis Teknologi Informasi dan berwawasan lingkungan, mantap dalam IMTAQ, unggul dalam IPTEK, berprestasi dalam olahraga dan seni serta siap bersaing dalam menghadapi era global.

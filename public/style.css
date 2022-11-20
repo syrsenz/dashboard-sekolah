@@ -8,38 +8,82 @@ color: #1d4e89; */
 body {
     padding: 0;
     margin: 0;
-    background-color: #f8f3f2;
+    background-color: #ffffff;
 }
 
 * {
     z-index: 2;
 }
 
-/* ---Navbar ----> */
-.navbar {
-    z-index: 3;
-    background-color: #f8f3f2;
+@media only screen and (min-width: 1200px) {
+    .nav-item > .nav-link {
+        padding: 5px 20px !important;
+        display: block !important;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .header-inner {
+        background-color: #ffffff !important;
+    }
+    .nav-item > .nav-link {
+        color: #181818 !important;
+    }
+    .content-banner .nama-sekolah {
+        font-size: 30px !important;
+    }
+}
+
+/* include header */
+.header {
+    position: relative;
     width: 100%;
+    z-index: 99;
 }
 
-.navbar-brand {
-    font-weight: 700;
-    font-size: 20px;
+.header-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: #1d4e89;
 }
 
-.nav-link {
-    font-weight: 700;
+.logo {
+    color: #ffffff;
+}
+
+.nav-item .nav-link {
+    display: block;
+    letter-spacing: 1px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #ffffff;
     font-size: 16px;
+    font-weight: 500;
+    transition: 0.15s;
+}
+
+.navbar-scroll {
+    background-color: #ffffff;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.4);
+    transition-duration: 0.6s;
+}
+
+.navbar-scroll .nav-item .nav-link {
     color: #181818;
 }
 
-.nav-link:hover {
-    color: #ffd400;
+.navbar-scroll .logo {
+    color: #181818;
 }
 
-.nav-link.active {
-    font-weight: 700;
-    color: #d90368 !important;
+.nav-item .nav-link:hover {
+    color: #ffd400;
 }
 
 .button-primary {
@@ -66,29 +110,81 @@ a {
     font-size: 16px;
 }
 
-/* ---Hero Section ----> */
-#hero {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+/* Button Scroll to Top */
+#button {
+    display: inline-block;
+    background-color: #d90368;
+    width: 50px;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: background-color 0.3s;
+    opacity: 0.5s, visibility 0.5s;
+    opacity: 0;
+    z-index: 99;
 }
 
-.mask {
-    width: 100%;
+#button i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #ffd400;
+}
+
+#button.show {
+    opacity: 1;
+}
+
+/* Banner Section */
+.content-banner {
+    color: #ffffff;
+    background-image: url(./assets/gedung.jpg);
+    min-height: 800px;
     height: 100vh;
     position: relative;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 125px;
 }
 
-.img-hero {
+.content-banner:before {
+    position: absolute;
+    content: "";
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
+    background-color: rgba(37, 37, 37, 0.61);
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.hero-nametag {
-    color: #f8f3f2;
+.content-banner .nama-sekolah {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+    margin: 200px 0px 0px 0px;
+}
+
+.content-banner .visi-sekolah {
+    text-align: center;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0;
+    position: relative;
+    z-index: 2;
+    font-weight: 400;
+    margin: 25px 0px 0px 0px;
 }
 
 /* ---Profile Section ----> */
@@ -100,6 +196,27 @@ a {
 .title-profile h2 {
     font-weight: bolder;
     color: #1d4e89;
+}
+
+/* Search Box */
+.search-box {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.btn.btn-search {
+    border-radius: 0 5px 5px 0;
+    height: 50px;
+    background: #ffd400;
+    color: #181818;
+}
+
+.search-input:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 /* ---Berita Section ----> */
@@ -138,18 +255,19 @@ a {
 }
 
 .btn-primary {
-    background-color: #ffffff !important;
+    background-color: #d90368 !important;
     border: 2px solid #d90368 !important;
     border-radius: 5px !important;
-    color: #d90368 !important;
+    color: #ffffff !important;
     font-weight: 700 !important;
     font-size: 17px !important;
     text-transform: uppercase !important;
 }
 
 .btn-primary:hover {
-    background-color: #d90368 !important;
-    color: #f8f3f2 !important;
+    background-color: #181818 !important;
+    border: 2px solid #181818 !important;
+    color: #ffffff !important;
 }
 
 /* ---Prestasi Section ----> */
@@ -222,29 +340,26 @@ a {
     object-fit: contain;
 }
 
-/* ---Footer ----> */
+/* ---Footer----> */
 .footer {
     padding: 100px 0;
-    background-color: #181818;
+    background-color: #181818 !important;
 }
 
-.footer-title {
-    font-weight: 700;
-    font-size: 18px;
-    color: #ffffff;
-}
-
-.footer-container {
-    text-align: left;
-}
-
-.footer-row {
-    text-align: left;
+.row-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .footer p {
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    color: #ffffff !important;
+}
+
+.list-informasi {
+    padding-left: 0;
+    list-style: none;
     color: #ffffff;
 }
 
@@ -257,14 +372,21 @@ a {
     color: #ffd400;
     transition: all 0.2s ease-in;
 }
-
-.fas {
-    margin-right: 5px;
+.fas-icon {
+    margin-right: 8px;
 }
 
 .name-team {
     color: #ffd400;
+    transition: all 0.2s ease-in;
 }
+
+.name-team:hover {
+    color: #ffffff;
+    transition: all 0.2s ease-in;
+}
+
+/* BATAS */
 
 /* .bg-image {
     background-image: url("/assets/gedung.jpg");
