@@ -19,7 +19,7 @@
           <div class="col mb-4">
             <div class="card-galeri" >
               <div class="image-galeri">
-                <img src="/image/{{$galeri->foto}}" class="card-image-top"  alt="...">
+                <img src="/image/{{$galeri->foto}}" class="card-image-top" width="100%"  alt="...">
               </div>
               <div class="card-body border-secondary border-bottom mb-2 py-3 px-2">
                 <h5 class="card-title">{{$galeri->keterangan}}</h5>

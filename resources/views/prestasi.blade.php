@@ -31,7 +31,7 @@
                 <p class="d-inline">{{$prestasi->created_at}}</p>
               </div>
               <p class="card-text">{{  Str::limit(strip_tags($prestasi->body), 45)}}</p>
-              <a href="/{{$prestasi->slug}}" class="link-to" style="position: absolute; bottom:10px; right:10px">Selengkapnya...</a>
+              <a href="/artikel/{{$prestasi->slug}}" class="link-to" style="position: absolute; bottom:10px; right:10px">Selengkapnya...</a>
             </div> 
           </div>
         </div>

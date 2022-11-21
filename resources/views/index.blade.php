@@ -61,7 +61,7 @@
             <div class="card-body border-secondary border-bottom mb-2 py-3 px-2">
               <h5 class="card-title">{{Str::limit($berita->judul, 30)}}</h5>
               <p class="card-text">{{  Str::limit(strip_tags($berita->body), 45)   }}</p>
-              <a href="/{{$berita->slug}}" class="link-to">Selengkapnya...</a>
+              <a href="/artikel/{{$berita->slug}}" class="link-to">Selengkapnya...</a>
             </div>
             <div class="text-secondary mb-4 px-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
@@ -115,7 +115,7 @@
                 <p class="d-inline">{{$prestasi->created_at}}</p>
               </div>
               <p class="card-text">{{  Str::limit(strip_tags($prestasi->body), 45)}}</p>
-              <a href="/{{$prestasi->slug}}" class="link-to" style="position: absolute; bottom:10px; right:10px">Selengkapnya...</a>
+              <a href="/artikel/{{$prestasi->slug}}" class="link-to" style="position: absolute; bottom:10px; right:10px">Selengkapnya...</a>
             </div> 
           </div>
         </div>
