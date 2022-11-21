@@ -21,18 +21,20 @@
     </div>
 
     {{-- Search Box --}}
+    <form action="/cari" method="get">
     <div class="search-box-container pt-5 pb-5">
       <div class="col-md-6 col-lg-6 col-11 mx-auto my-auto search">
         <div class="input-group form-container">
           <input type="text" name="search" class="form-control search-input" placeholder="Apa yang ingin anda cari?" autofocus="autofocus" autocomplete="off">
           <span class="input-group-btn">
-            <button class="btn btn-search">
+            <button class="btn btn-search" type="submit">
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </span>
         </div>
       </div>
     </div>
+    </form>
     {{-- End Search Box --}}
   </div>
 </section>
