@@ -54,6 +54,9 @@ class dashboard_controller extends Controller
     public function gurudankaryawan(){
         return view('gurukaryawan');
     }
+    public function daftar(){
+        return view('pendaftaran');
+    }
     public function login(){
         return view('admin/login');
     }

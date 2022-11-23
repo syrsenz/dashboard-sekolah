@@ -15,6 +15,7 @@ Route::get('/', [dashboard_controller::class,'index']);
 Route::get('/cari', [dashboard_controller::class,'cari']);
 Route::get('/postingan/slug', [postingan_controller::class,'slug']);
 Route::get('/berita', [dashboard_controller::class,'berita']);
+Route::get('/ppdb', [dashboard_controller::class,'daftar']);
 Route::get('/prestasi', [dashboard_controller::class,'prestasi']);
 Route::get('/galeri', [dashboard_controller::class,'galeri']);
 Route::get('/profile', [dashboard_controller::class,'profile']);

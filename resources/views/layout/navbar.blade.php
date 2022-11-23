@@ -60,6 +60,10 @@
                 <a class="nav-link" href="/galeri">GALERI
                 </a>
               </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="/ppdb">PPDB
+                </a>
+              </li>
             </ul>
             <div>
               <a class="button-primary btn" href="#kontak">KONTAK
