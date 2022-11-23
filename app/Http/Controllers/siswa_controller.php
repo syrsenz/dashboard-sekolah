@@ -101,4 +101,47 @@ class siswa_controller extends Controller
         siswa::find($id)->delete();
         return redirect('/siswa');
     }
+    public function prosesRegistrasi(Request $request){
+    $validated = $request->validate([
+        'nama'=>['required'],
+        'asal_sekolah'=>['required'],
+        'tempat_lahir'=>['required'],
+        'tanggal_lahir'=>['required'],
+        'nisn'=>['required'],
+        'jenis_kelamin'=>['required'],
+        'tahun_lulus'=>['required'],
+        'email'=>['required'],
+        'nilai_rata'=>['required'],
+        'kontak_siswa'=>['required'],
+
+        'nama_ayah'=>['required'],
+        'pekerjaan_ayah'=>['required'],
+        'tempat_lahir_ayah'=>['required'],
+        'tanggal_lahir_ayah'=>['required'],
+        'kontak_lahir_ayah'=>['required'],
+
+        'nama_ibu'=>['required'],
+        'pekerjaan_ibu'=>['required'],
+        'tempat_lahir_ibu'=>['required'],
+        'tanggal_lahir_ibu'=>['required'],
+        'kontak_lahir_ibu'=>['required'],
+
+        'alamat_orangtua'=>['required'],
+        'kode_pos'=>['required'],
+        'kecamatan'=>['required'],
+        'kabupaten'=>['required'],
+        'provinsi'=>['required'],
+
+        'nama_wali'=>[''],
+        'pekerjaan_wali'=>[''],
+        'status_wali'=>[''],
+        'kontak_wali'=>[''],
+        'alamat_wali'=>[''],
+        'kode_pos_wali'=>[''],
+        'kecamatan_wali'=>[''],
+        'kabupaten_wali'=>[''],
+        'provinsi_wali'=>[''],
+    ]);
+
+    }
 }

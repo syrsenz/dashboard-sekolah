@@ -8,6 +8,7 @@ class CreateSiswasTable extends Migration
 {
     /**
      * Run the migrations.
+     * 
      *
      * @return void
      */
