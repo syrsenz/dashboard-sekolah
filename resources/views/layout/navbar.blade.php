@@ -26,7 +26,7 @@
       <nav class="navbar navbar-expand-lg my-navbar">
           <a class="navbar-brand" href="#">
             <span class="logo">
-              <img src="/assets/logo.png" alt="logo" width="40" class="d-inline-block me-3">MTS MA'ARIF NYATNYONO
+              <img src="/assets/logo-lp-ma'arif-nu.png" alt="logo" width="40" class="d-inline-block me-3 bg-light">MTS MA'ARIF NYATNYONO
             </span>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

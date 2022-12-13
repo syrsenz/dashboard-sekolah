@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use  \App\Models\siswa;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Dompdf\Dompdf;
 
 class siswa_controller extends Controller
 {
@@ -186,8 +187,11 @@ class siswa_controller extends Controller
         ]);
         siswa::create($validated);
 
-        $pdf = Pdf::loadView('printPendaftaran' )->setOptions(['defaultFont' => 'sans-serif']);
-        return $pdf->download('testing.pdf');
+        $pdf = Pdf::loadView('printPendaftaran' )->setOption([
+            'defaultFont' => 'sans-serif',
+        ]);
+
+        return $pdf->download('formulir_pendaftaran.pdf');
     
     }
 }

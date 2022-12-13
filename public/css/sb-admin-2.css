@@ -10762,6 +10762,7 @@ a:focus {
 .sidebar {
     width: 6.5rem;
     min-height: 100vh;
+    background: #184d47 !important;
 }
 
 .sidebar .nav-item {
@@ -11743,4 +11744,21 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
     width: 100%;
+}
+
+.btn-logout {
+    background: #ffd400 !important;
+}
+
+.btn-tambah {
+    background: #184d47 !important;
+    color: #f8f3f2 !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease-in;
+}
+
+.btn-tambah:hover {
+    background: #ffd400 !important;
+    color: #000 !important;
+    transition: all 0.2s ease-in;
 }
